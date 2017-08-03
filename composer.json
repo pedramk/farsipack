@@ -1,0 +1,23 @@
+{
+    "name": "pedramk/farsipack",
+    "description": "Pack for farsi modifications and more...",
+    "type": "library",
+    "keywords": ["farsi", "numbers", "enum", "utilites"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pedram Kashani",
+            "email": "exp.worlds@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/pedramk/farsipack/issues",
+        "source": "https://github.com/pedramk/farsipack"
+    },
+    "require": {
+		"php": ">=5.4"
+    },
+	"autoload": {
+        "psr-4": {"PedramK\\FarsiPack\\": "src/"}
+    }
+}
