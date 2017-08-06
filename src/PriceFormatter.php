@@ -4,7 +4,7 @@ namespace PedramK\FarsiPack;
 
 use Exception;
 use PedramK\FarsiPack\Modifier;
-use PedramK\FarsiPack\FarsiEnum;
+use PedramK\FarsiPack\Enum;
 
 class PriceFormatter
 {
@@ -36,6 +36,8 @@ class PriceFormatter
 	public static function setUnit($price, $unit)
 	{
 		$length = strlen($price);
+		if($length > 12) { throw new Exception('Price is out of range!'); }
+
 		$zeroGroup = floor($length/3);
 		$rem = $length%3;
 
@@ -52,10 +54,11 @@ class PriceFormatter
 				$prefix = 'b';
 				break;
 			default:
+				throw new Exception('Whoops! Something unusual happened!');
 				break;
 		}
 		
-		return (explode(',', self::commaSeparated($price)))[0] . ' ' . FarsiEnum::priceUnit($prefix) . ' ' . FarsiEnum::priceUnit($unit);
+		return (explode(',', self::commaSeparated($price)))[0] . ' ' . Enum::priceUnit($prefix) . ' ' . Enum::priceUnit($unit);
 	}
 
 	private static function commaSeparated($number)

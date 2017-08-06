@@ -2,7 +2,7 @@
 
 namespace PedramK\FarsiPack;
 
-class FarsiEnum
+class Enum
 {
 	public static function gender($enum)
 	{
@@ -11,8 +11,8 @@ class FarsiEnum
 
 		$data = [
 			0 => $woman,
-			1 => $men,
-			'male' => $men,
+			1 => $man,
+			'male' => $man,
 			'female' => $woman
 		];
 

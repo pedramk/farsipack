@@ -2,7 +2,7 @@
     "name": "pedramk/farsipack",
     "description": "Pack for farsi modifications and more...",
     "type": "library",
-    "keywords": ["farsi", "numbers", "enum", "utilites"],
+    "keywords": ["farsi", "persian", "numbers", "enum", "utilites"],
     "license": "MIT",
     "authors": [
         {
